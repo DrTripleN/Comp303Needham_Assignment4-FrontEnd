@@ -16,7 +16,7 @@ function DonorList() {
                 console.error('Error fetching donor data:', error);  // Log any error
             });
     }, []);
-    // Function to format DOB to MM/DD/YYYY
+
     const formatDate = (date) => {
         const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
         return new Date(date).toLocaleDateString(undefined, options);
