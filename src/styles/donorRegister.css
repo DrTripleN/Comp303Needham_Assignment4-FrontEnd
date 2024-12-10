@@ -1,0 +1,28 @@
+/* donorRegister.css */
+html,body {
+    background-image: url('../../images/blooddonate.jpg');
+    background-size: cover; /* Ensures the image covers the entire page */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Ensures the image doesn't repeat */
+    height: 100%; /* Makes the background cover the entire viewport height */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+/* Other styling for the page */
+.container {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+}
+
+.translucent-form {
+    background: rgba(255, 255, 255, 0.4); /* White with 40% opacity */
+    backdrop-filter: blur(10px); /* Blur the background behind the form */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Optional border */
+    border-radius: 15px; /* Optional rounded corners */
+    padding: 20px;
+}
