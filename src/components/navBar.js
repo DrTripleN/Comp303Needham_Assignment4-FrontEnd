@@ -26,7 +26,7 @@ function Navigation({ loggedInUser , onLogout }) {
                             </>
                         )}
                     </Nav>
-                    {/* Show logged-in user's name at the end of the navbar */}
+                    {}
                     {loggedInUser  && (
                         <Navbar.Text>
                             Signed in as: {loggedInUser .firstName} {loggedInUser .lastName}

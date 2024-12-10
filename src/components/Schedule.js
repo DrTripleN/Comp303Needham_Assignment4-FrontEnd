@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Button, Form, Card, Container, Row, Col } from "react-bootstrap";
-import DatePicker from "react-datepicker"; // Import react-datepicker
-import "react-datepicker/dist/react-datepicker.css"; // Import the styles for the calendar
-import instance from "../services/api"; // Assuming you have the instance set up for API calls
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import instance from "../services/api";
 
 function Schedule({ donorId }) {
     const [bloodBanks, setBloodBanks] = useState([]);
@@ -33,7 +33,7 @@ function Schedule({ donorId }) {
             const donorResponse = await instance.get(`donors/${donorId}`);
             const existingDonor = donorResponse.data;
 
-            // Format the date in the desired format (e.g., YYYY-MM-DD)
+
             const formattedDate = donationDate.toISOString().split("T")[0];
             const donationInfo = `${formattedDate} - ${selectedBank}`;
 

@@ -59,7 +59,7 @@ function Profile({ donorId }) {
                 await axios.delete(`http://localhost:8763/api/donors/delete/${donorId}`);
                 setSuccess("Profile deleted successfully!");
                 setError("");
-                // Optionally, redirect the user or clear the donor data
+
                 setDonorData(null); // Clear donor data after deletion
             } catch (error) {
                 console.error("Error deleting profile:", error); // Log the error

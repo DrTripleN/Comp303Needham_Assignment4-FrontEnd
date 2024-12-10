@@ -17,8 +17,8 @@ function Login({ onLogin }) {
                 null,
                 {
                     params: {
-                        firstName: firstName, // Assuming you have a first name field
-                        lastName: lastName // Assuming you have a last name field
+                        firstName: firstName,
+                        lastName: lastName
                     },
                     headers: {
                         "Content-Type": "application/json",
@@ -28,13 +28,13 @@ function Login({ onLogin }) {
 
             if (response.status === 200) {
                 console.log("Login successful!");
-                const donor = response.data; // Get the Donor object from the response
+                const donor = response.data;
                 const user = {
-                    id: donor.id, // Get the ID from the Donor object
-                    firstName: donor.firstName, // Get the first name from the Donor object
-                    lastName: donor.lastName // Get the last name from the Donor object
+                    id: donor.id,
+                    firstName: donor.firstName,
+                    lastName: donor.lastName
                 };
-                onLogin(user); // Pass user data to the parent component
+                onLogin(user);
                 navigate('/profile'); // Redirect to the profile page
             }
         } catch (error) {

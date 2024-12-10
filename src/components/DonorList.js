@@ -8,7 +8,7 @@ function DonorList() {
     // Fetch donors from API
     useEffect(() => {
         // Make the API call using the instance to fetch the donor data
-        instance.get("donors/all")  // Correct usage: instance.get(path)
+        instance.get("donors/all")
             .then(response => {
                 setDonors(response.data);  // Set the donors state with the response data
             })
